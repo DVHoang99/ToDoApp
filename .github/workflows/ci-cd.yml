@@ -20,14 +20,8 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: check file Dockerfile
-        run: |
-          ls -l
-          ls -l ToDoApp || echo "not found ToDoApp"
-
       - name: Build Docker image
         run: |
-          cd ToDoApp
           docker build -t dvhoang86/todoapp-backend:latest .
 
       - name: Push Docker image
