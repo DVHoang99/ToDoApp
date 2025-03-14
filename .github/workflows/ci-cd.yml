@@ -22,6 +22,7 @@ jobs:
 
       - name: Build Docker image
         run: |
+          cd ToDoApp
           docker build -t dvhoang86/todoapp-backend:latest .
 
       - name: Push Docker image
